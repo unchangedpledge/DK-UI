@@ -1,0 +1,106 @@
+.dk-carousel {
+  user-select: none;
+  width: 700px;
+  height: 440px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  &:hover .dk-carousel-arrow > div{
+    transition: all .5s;
+    opacity: 1;
+  }
+  .dk-carousel-content-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 600%;
+    .dk-carousel-content-item {
+      height: 100%;
+      float: left;
+    }
+  }
+  .dk-carousel-content-fade {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    .dk-carousel-content-item {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: all .8s;
+      &.current {
+        opacity: 1;
+        // z-index: 10;
+      }
+    }
+  }
+
+  .dk-carousel-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    margin-left: -30px;
+    border-radius: 10px;
+    .dk-carousel-indicator-item {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 3px;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, .4);
+      vertical-align: middle;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover {
+        background-color: rgba(255, 255, 255, .7);
+      }
+      &.current {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  .dk-carousel-arrow {
+    & > div {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 32px;
+      color: rgba(255, 255, 255, .4);
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
+      &:hover {
+        color: #fff;
+        transition: background-color .5s;
+        background-color: rgb(211, 230, 236, .3);
+      }
+    }
+    .dk-carousel-arrow-prev {
+      left: 0;
+      border-radius: 0 2px 2px 0;
+    }
+    .dk-carousel-arrow-next {
+      right: 0;
+      border-radius: 2px 0 0 2px;
+    }
+  }
+}
+
+.dk-icon {
+  display: inline-block;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+}

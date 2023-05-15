@@ -1,0 +1,60 @@
+{
+  "name": "dkui",
+  "description": "DK UI 前端组件库",
+  "version": "1.0.0",
+  "author": "sk",
+  "main": "./dist/DK-UI.umd.js",
+  "module": "./dist/DK-UI.es.js",
+  "keywords": ["react", "ui components", "jsencrypt", "js"],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^11.1.1",
+    "ahooks": "^3.7.6",
+    "classnames": "^2.3.2",
+    "rc-progress": "^3.4.1",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@mdx-js/mdx": "^2.3.0",
+    "@mdx-js/react": "^2.1.5",
+    "@mdx-js/rollup": "^2.3.0",
+    "@storybook/addon-essentials": "^7.0.2",
+    "@storybook/addon-interactions": "^7.0.2",
+    "@storybook/addon-links": "^7.0.2",
+    "@storybook/blocks": "^7.0.2",
+    "@storybook/react": "^7.0.2",
+    "@storybook/react-vite": "^7.0.2",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react-refresh": "^1.3.6",
+    "deep-eql": "^4.1.3",
+    "history": "^5.3.0",
+    "prism-react-renderer": "^2.0.4",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-code-view": "^2.2.1",
+    "react-dom": "^18.2.0",
+    "react-live": "^4.1.0",
+    "react-router-dom": "^6.11.1",
+    "sass": "^1.62.0",
+    "storybook": "^7.0.2",
+    "vite": "^4.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  }
+}

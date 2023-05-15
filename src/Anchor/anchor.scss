@@ -1,0 +1,58 @@
+.dk-anchor-wrapper {
+  margin-top: -4px;
+  padding-top: 4px;
+  font-size: 14px;
+  background-color: transparent;
+  .dk-anchor {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.88);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    position: relative;
+    padding-left: 2px;
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      border-left: 2px solid rgba(5,5,5,.06);
+      content: " ";
+    }
+    .dk-anchor-ink {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      transform: translateY(-50%);
+      transition: top .3s ease-in-out;
+      width: 2px;
+      background-color: #1677ff;
+    }
+    .dk-anchor-link {
+      padding-block: 4px;
+      padding-inline: 16px 0;
+      box-sizing: border-box;
+      .dk-anchor-link-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+        display: block;
+        margin-block-end: 3px;
+        color: rgba(0,0,0,.88);
+        transition: all .3s;
+
+        text-decoration: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+      }
+      &-active>.dk-anchor-link-title {
+        color: #1677ff;
+      }
+    }
+
+  }
+}
